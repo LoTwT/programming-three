@@ -1,0 +1,49 @@
+{
+  "name": "programming-three",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.10.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "prepare": "simple-git-hooks",
+    "up": "taze latest -I -f",
+    "prettier": "prettier --write ."
+  },
+  "dependencies": {
+    "next": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@ayingott/eslint-config": "catalog:",
+    "@ayingott/prettier-config": "catalog:",
+    "@eslint-react/eslint-plugin": "catalog:",
+    "@tailwindcss/postcss": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "eslint": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
+    "eslint-plugin-react-refresh": "catalog:",
+    "lint-staged": "catalog:",
+    "prettier": "catalog:",
+    "simple-git-hooks": "catalog:",
+    "tailwindcss": "catalog:",
+    "taze": "catalog:",
+    "typescript": "catalog:"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged"
+  },
+  "lint-staged": {
+    "*": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "prettier": "@ayingott/prettier-config"
+}
