@@ -16,7 +16,9 @@
   "dependencies": {
     "next": "catalog:",
     "react": "catalog:",
-    "react-dom": "catalog:"
+    "react-dom": "catalog:",
+    "stats.js": "catalog:",
+    "three": "catalog:"
   },
   "devDependencies": {
     "@ayingott/eslint-config": "catalog:",
@@ -26,6 +28,8 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
+    "@types/stats.js": "catalog:",
+    "@types/three": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-react-hooks": "catalog:",
     "eslint-plugin-react-refresh": "catalog:",
