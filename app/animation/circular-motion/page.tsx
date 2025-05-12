@@ -1,7 +1,7 @@
 "use client"
 
 import { mountStats } from "@/utils/mount-stats"
-import React, { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react"
 import {
   BoxGeometry,
   Clock,
@@ -12,7 +12,7 @@ import {
   WebGLRenderer,
 } from "three"
 
-function ThreeClock() {
+function CircularMotion() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -23,9 +23,7 @@ function ThreeClock() {
 
     const cube = new Mesh(
       new BoxGeometry(1, 1, 1),
-      new MeshBasicMaterial({
-        color: 0xff0000,
-      }),
+      new MeshBasicMaterial({ color: 0x607d8b }),
     )
     scene.add(cube)
 
@@ -33,7 +31,7 @@ function ThreeClock() {
       75,
       canvas.clientWidth / canvas.clientHeight,
     )
-    camera.position.set(1, 1, 3)
+    camera.position.set(0, 0, 3)
     camera.lookAt(cube.position)
 
     const renderer = new WebGLRenderer({
@@ -47,8 +45,12 @@ function ThreeClock() {
 
     const tick = () => {
       stats.begin()
-      const delta = clock.getDelta()
-      cube.rotation.y += 1 * delta
+
+      const elapsedTime = clock.getElapsedTime()
+
+      cube.position.y = Math.sin(elapsedTime)
+      cube.position.x = Math.cos(elapsedTime)
+      // camera.lookAt(cube.position)
 
       renderer.render(scene, camera)
       stats.end()
@@ -63,7 +65,7 @@ function ThreeClock() {
     }
   }, [])
 
-  return <canvas className="h-full w-full" ref={canvasRef}></canvas>
+  return <canvas className="h-full w-full" ref={canvasRef} />
 }
 
-export default ThreeClock
+export default CircularMotion

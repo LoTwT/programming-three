@@ -20,6 +20,14 @@ export default function Home() {
               three-clock
             </NextLink>
           </li>
+          <li>
+            <NextLink
+              className="hover:underline"
+              href="/animation/circular-motion"
+            >
+              circular-motion
+            </NextLink>
+          </li>
         </ul>
       </section>
     </main>
