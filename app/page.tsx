@@ -28,6 +28,11 @@ export default function Home() {
               circular-motion
             </NextLink>
           </li>
+          <li>
+            <NextLink className="hover:underline" href="/animation/gsap">
+              gsap
+            </NextLink>
+          </li>
         </ul>
       </section>
     </main>
