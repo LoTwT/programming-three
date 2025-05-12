@@ -15,6 +15,11 @@ export default function Home() {
               time-interval
             </NextLink>
           </li>
+          <li>
+            <NextLink className="hover:underline" href="/animation/three-clock">
+              three-clock
+            </NextLink>
+          </li>
         </ul>
       </section>
     </main>
