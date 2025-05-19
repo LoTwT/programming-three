@@ -1,6 +1,5 @@
 "use client"
 
-import { mountStats } from "@/utils/mount-stats"
 import gsap from "gsap"
 import { useEffect, useRef } from "react"
 import {
@@ -11,6 +10,7 @@ import {
   Scene,
   WebGLRenderer,
 } from "three"
+import { mountStats } from "@/utils/mount-stats"
 
 function Gsap() {
   const canvasRef = useRef<HTMLCanvasElement>(null)

@@ -1,6 +1,5 @@
 "use client"
 
-import { mountStats } from "@/utils/mount-stats"
 import { useEffect, useRef } from "react"
 import {
   BoxGeometry,
@@ -10,6 +9,7 @@ import {
   Scene,
   WebGLRenderer,
 } from "three"
+import { mountStats } from "@/utils/mount-stats"
 
 function TimeInterval() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
