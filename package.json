@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "prepare": "simple-git-hooks",
     "up": "taze latest -I -f",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "single-file": "single-file"
   },
   "dependencies": {
     "execa": "catalog:",
@@ -19,6 +20,7 @@
     "next": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
+    "single-file-cli": "catalog:",
     "stats.js": "catalog:",
     "three": "catalog:"
   },

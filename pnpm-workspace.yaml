@@ -19,6 +19,7 @@ catalog:
   react: ^19.1.0
   react-dom: ^19.1.0
   simple-git-hooks: ^2.13.0
+  single-file-cli: ^2.0.75
   stats.js: ^0.17.0
   tailwindcss: ^4.1.7
   taze: ^19.1.0
